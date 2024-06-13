@@ -5,7 +5,7 @@ document.getElementById('uploadForm').addEventListener('submit', function(event)
     const resultsSection = document.getElementById('resultsSection');
     const resultText = document.getElementById('resultText');
 
-    // Генерация случайного процента для демонстрации (в реальности здесь будет интеграция с антивирусным API)
+    // Генерация случайного процента для демонстрации (https://vms.drweb.ru/online)
     let virusProbability = Math.floor(Math.random() * 101);
 
     // Вывод текста в зависимости от процента вероятности вируса
