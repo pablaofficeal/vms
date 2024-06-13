@@ -48,7 +48,7 @@ form {
     margin: 20px 0;
 }
 
-input[type="file"], input[type="url"] {
+input[type="file"], input[type="url"], input[type="text"], input[type="email"], input[type="password"] {
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -68,7 +68,7 @@ button:hover {
     background-color: #003366;
 }
 
-.results {
+.results, .registration, .payments {
     text-align: center;
     padding: 20px;
     background-color: #ffffff;
@@ -85,4 +85,10 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.premium-info {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #004080;
 }
