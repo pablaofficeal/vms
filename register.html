@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
+    <title>Регистрация на сайте VirusCheck</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,39 +11,60 @@
         <div class="logo">VirusCheck</div>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="index.html#check">Проверка</a></li>
-                <li><a href="#">Регистрация</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Проверка</a></li>
+                <li><a href="register.html">Регистрация</a></li>
                 <li><a href="payments.html">Платёжные системы</a></li>
-                <li><a href="index.html#about">О нас</a></li>
+                <li><a href="privacy.html">Политика конфиденциальности</a></li>
+                <li><a href="#">О нас</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <section class="hero">
+            <h1>Проверка файлов и ссылок на вирусы</h1>
+            <form id="uploadForm">
+                <input type="file" id="fileInput" accept="image/*">
+                <input type="url" id="urlInput" placeholder="Вставьте ссылку для проверки">
+                <div id="captcha">
+                    <p>Выберите картинку с зеленым цветом:</p>
+                    <img src="captcha/green.png" alt="Green image">
+                    <img src="captcha/blue.png" alt="Blue image">
+                    <input type="radio" name="captcha" value="green"> Зеленая картинка
+                    <input type="radio" name="captcha" value="blue"> Синяя картинка
+                </div>
+                <button type="submit">Проверить</button>
+            </form>
+            <p class="premium-info">За отдельную плату мы можем предоставить немного больше проверок.</p>
+        </section>
+        <section class="results" id="resultsSection" style="display: none;">
+            <h2>Результаты проверки</h2>
+            <p id="resultText"></p>
+        </section>
         <section class="registration">
-            <h1>Регистрация</h1>
+            <h2>Регистрация</h2>
             <form id="registrationForm">
-                <input type="text" id="firstName" placeholder="Имя" required>
-                <input type="text" id="lastName" placeholder="Фамилия" required>
-                <input type="email" id="email" placeholder="Электронная почта" required>
-                <input type="password" id="password" placeholder="Пароль" required>
+                <input type="text" id="firstName" placeholder="Имя">
+                <input type="text" id="lastName" placeholder="Фамилия">
+                <input type="email" id="email" placeholder="Электронная почта">
+                <input type="password" id="password" placeholder="Пароль">
+                <input type="file" id="photoInput" accept="image/*">
+                <div id="captcha">
+                    <p>Выберите картинку с зеленым цветом:</p>
+                    <img src="captcha/green.png" alt="Green image">
+                    <img src="captcha/blue.png" alt="Blue image">
+                    <input type="radio" name="captcha" value="green"> Зеленая картинка
+                    <input type="radio" name="captcha" value="blue"> Синяя картинка
+                </div>
                 <button type="submit">Зарегистрироваться</button>
             </form>
-            <div id="successMessage" style="display: none;">
-                <p>Регистрация прошла успешно!</p>
-            </div>
-            <div class="social-login">
-                <p>Войти с помощью:</p>
-                <button class="google-btn">Google</button>
-                <button class="apple-btn">Apple</button>
-                <button class="vk-btn">ВКонтакте</button>
-            </div>
+            <p id="successMessage" style="display: none;">Регистрация прошла успешно!</p>
         </section>
     </main>
     <footer>
         <p>&copy; 2024 VirusCheck. Все права защищены.</p>
         <p>Контактные данные: pavlogorosko56@gmail.com</p>
     </footer>
-    <script src="register.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
