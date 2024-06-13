@@ -1,21 +1,23 @@
-document.getElementById('uploadForm').addEventListener('submit', function(event) {
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const fileInput = document.getElementById('fileInput');
-    const urlInput = document.getElementById('urlInput');
-    const resultsSection = document.getElementById('resultsSection');
-    const resultText = document.getElementById('resultText');
 
-    // Генерация случайного процента для демонстрации (в реальности здесь будет интеграция с антивирусным API)
-    let virusProbability = Math.floor(Math.random() * 101);
+    // Симуляция успешной регистрации
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
 
-    // Вывод текста в зависимости от процента вероятности вируса
-    if (fileInput.files.length > 0) {
-        resultText.textContent = `Файл проверен, вероятность вируса: ${virusProbability}%`;
-    } else if (urlInput.value) {
-        resultText.textContent = `Ссылка проверена, вероятность вируса: ${virusProbability}%`;
-    } else {
-        resultText.textContent = 'Пожалуйста, загрузите файл или вставьте ссылку для проверки.';
-    }
+    // Сброс формы после успешной регистрации
+    document.getElementById('registrationForm').reset();
+});
 
-    resultsSection.style.display = 'block';
+// Обработчики событий для кнопок входа через социальные сети
+document.querySelector('.google-btn').addEventListener('click', function() {
+    alert('Вход через Google временно недоступен.');
+});
+
+document.querySelector('.apple-btn').addEventListener('click', function() {
+    alert('Вход через Apple временно недоступен.');
+});
+
+document.querySelector('.vk-btn').addEventListener('click', function() {
+    alert('Вход через ВКонтакте временно недоступен.');
 });
