@@ -92,3 +92,42 @@ footer {
     font-weight: bold;
     color: #004080;
 }
+
+#successMessage {
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.google-btn, .apple-btn, .vk-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #4285F4; /* Цвет для Google */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.apple-btn {
+    background-color: #000; /* Цвет для Apple */
+}
+
+.vk-btn {
+    background-color: #4C75A3; /* Цвет для ВКонтакте */
+}
+
+.google-btn:hover, .apple-btn:hover, .vk-btn:hover {
+    opacity: 0.8;
+}
