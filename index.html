@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка на вирусы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">VirusCheck</div>
+        <nav>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Проверка</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Проверка файлов и ссылок на вирусы</h1>
+            <form id="uploadForm">
+                <input type="file" id="fileInput">
+                <input type="url" id="urlInput" placeholder="Вставьте ссылку для проверки">
+                <button type="submit">Проверить</button>
+            </form>
+        </section>
+        <section class="results" id="resultsSection" style="display: none;">
+            <h2>Результаты проверки</h2>
+            <p id="resultText"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 VirusCheck. Все права защищены.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
